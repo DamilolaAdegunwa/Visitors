@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Visitors.View.DeleteVisitorUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:Visitors.View"
+             mc:Ignorable="d" Height="836" Width="910" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Background>
+        <ImageBrush ImageSource="C:\Users\30692\Documents\Telerik\laptop.jpg" Stretch="Fill"/>
+    </UserControl.Background>
+    <Grid>
+        <Label x:Name="DeleteVisitorLbl" Content="Delete User" HorizontalAlignment="Left" Margin="363,38,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="24px" Foreground="#FFE0E0E0"/>
+        <Label x:Name="UserNameLbl" Content="User Name" HorizontalAlignment="Left" Margin="270,174,0,0" VerticalAlignment="Top" Width="108"  FontFamily="Stencil" FontSize="16" Foreground="#FFE0E0E0"/>
+        <TextBox x:Name="UserNameTxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="169" Margin="393,174,0,0"/>
+        <telerik:RadButton  CornerRadius="15" x:Name="searchUserNameBtn" Content="Search" Canvas.Left="586" Canvas.Top="336" Width="75"  FontFamily="Stencil" FontSize="16"  Height="29" Click="searchUserNameBtn_Click_1" Margin="581,152,254,655" />
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="0" Margin="462,432,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="8"/>
+        <DataGrid x:Name="dataGridUser" Canvas.Left="83" Canvas.Top="548" Width="771"  Margin="65,271,74,436" IsReadOnly="True"/>
+        <telerik:RadButton  CornerRadius="15" x:Name="deleteBtn"  Content="Delete" FontFamily="Stencil" FontSize="16"  HorizontalAlignment="Left" Margin="404,229,0,0" VerticalAlignment="Top" Width="75" Click="deleteBtn_Click" Visibility="Hidden"/>
+        <telerik:RadButton  CornerRadius="15" x:Name="FindAllBtn" Content="Find All" FontSize="16" HorizontalAlignment="Left" Margin="404,214,0,0" VerticalAlignment="Top" Width="95" Click="FindAll_Click" Height="40"/>
+    </Grid>
+
+</UserControl>

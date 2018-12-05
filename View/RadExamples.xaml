@@ -1,0 +1,29 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:Visitors"
+        xmlns:View="clr-namespace:Visitors.View" x:Class="Visitors.radCarouse1"
+        mc:Ignorable="d" Height="907.196" Width="1101.643"
+        Title="radCarouse1" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+   <Grid>
+        <telerik:RadExpander x:Name="dropdown" Header="Menu"  Width="187" HorizontalAlignment="Left" Background="#FF53B4D1"  ExpandDirection="Down">
+        
+            <ListBox Background="#FFCBEAF3"  ScrollViewer.HorizontalScrollBarVisibility="Visible" Width="187" FontFamily="Stencil" FontSize="16" MouseDoubleClick="ListBox_MouseDoubleClick_1" >
+                <ListBoxItem Content="Add Visitor" Width="139" Height="150" MouseDoubleClick="mouseDoubleClickOnAddVisitor"/>
+                <ListBoxItem Content="Update Visitor" Width="148" Height="150" MouseDoubleClick="mouseDoubleClickEditVisitor"/>
+                <ListBoxItem Content="View User" Width="140" Height="150" MouseDoubleClick="mouseDoubleClickViewVisitor"/>
+                <ListBoxItem Content="Delete visitor" Width="142" Height="150"  MouseDoubleClick="mouseDoubleClickDeleteVisitor"/>
+                <ListBoxItem Content="    Log Out" Width="132" Height="150" RenderTransformOrigin="0.333,0.49"  MouseDoubleClick="mouseDoubleClickLogOut" />
+
+            </ListBox>
+        </telerik:RadExpander>
+        <View:EditRoleUserControl x:Name="editvisitorUserControl1" HorizontalAlignment="Stretch" Margin="192,0,-8,0" VerticalAlignment="Stretch" />
+        <View:ViewVisitorDetails x:Name="viewVisitorUserCtrl1" HorizontalAlignment="Stretch" Margin="192,0,-8,0" VerticalAlignment="Stretch" />
+        <View:DeleteVisitorUserControl x:Name="deleteVisitorCtrl1" HorizontalAlignment="Stretch" Margin="192,0,-8,0" VerticalAlignment="Stretch" />
+        <View:InsertUsrCtrl x:Name="addvisitorUserControl1" HorizontalAlignment="Stretch" Margin="192,0,-8,0" VerticalAlignment="Stretch" />
+
+    </Grid>
+</Window>

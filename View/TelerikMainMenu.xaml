@@ -1,0 +1,33 @@
+﻿<Window x:Class="Visitors.View.TelerikMainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:Visitors.View"
+        mc:Ignorable="d"
+        Title="TelerikMainMenu" Height="907.196" Width="1101.643">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\30692\Documents\Telerik\lightblue.png"/>
+    </Window.Background>
+    
+    <Grid RenderTransformOrigin="0.565,0.494">
+       
+        <Button x:Name="MenuBtn" Content="Menu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Height="29" FontFamily="Stencil" FontSize="14" Click="MenuBtn_Click" Margin="0,28,0,0" />
+
+        
+        <telerik:RadMenu Name="outermenu" VerticalAlignment="Top" HorizontalAlignment="Left" Orientation="Vertical"   Height="841" Margin="0,57,0,-22" Width="187" Background="#FF2D6D7C" Visibility="Hidden" >
+            <telerik:AnimationSelector>
+
+            </telerik:AnimationSelector>
+            <telerik:RadMenu Name="Radmenu" VerticalAlignment="Top" HorizontalAlignment="Left" Orientation="Vertical" Width="177" Height="841 " Background="#FF2D6D7C" FontFamily="Stencil" FontSize="18" >
+                <telerik:RadMenuItem Header="Add Visitors" Width="154" Height="200"/>
+                <telerik:RadMenuItem Header="Edit Visitors" Width="154" Height="200"/>
+                <telerik:RadMenuItem Header="delete Visitors" Width="154" Height="200"/>
+                <telerik:RadMenuItem Header="Log Out" Width="154" Height="200"/>
+            </telerik:RadMenu>
+        </telerik:RadMenu>
+        <telerik:RadCalendar x:Name="Calendar" Height="250" Margin="622,292,150,334"/>
+        <telerik:RadButton x:Name="BtnChangeFontSize" Height="30" HorizontalAlignment="Center" Content="Change Font" Click="BtnChangeFontSize_Click_1" Margin="521,387,500,459"/>
+    </Grid>
+</Window>
